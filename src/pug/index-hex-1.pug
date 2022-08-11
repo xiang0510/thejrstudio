@@ -1,0 +1,15 @@
+extends _base.pug
+
+block vars
+    - colorScheme = 'purple'
+
+block title
+    title Nås
+
+block hero
+    .hero.purple.darken-4.overflow-hidden
+        canvas#canvas
+        h1.bold Time to go get it
+
+block custom-scripts
+    script(src='./assets/js/hexes-i.js')

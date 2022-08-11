@@ -1,0 +1,18 @@
+extends _base.pug
+
+block vars
+    - colorScheme = 'blue-green-gradient'
+    - logoType = 'image'
+    - cases = 'white-bgs'
+
+block title
+    title Nås
+
+block hero
+    #triangles.triangles.hero
+        #output
+        h1 Doing what we do best
+
+block custom-scripts
+    script(src='./libs/flat-surface-shader/deploy/fss.js')
+    script(src='./assets/js/triangles-ii.js')

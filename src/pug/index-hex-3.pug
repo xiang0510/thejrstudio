@@ -1,0 +1,16 @@
+extends _base.pug
+
+block vars
+    - colorScheme = 'cyan'
+    - cases = 'alt'
+
+block title
+    title Nås
+
+block hero
+    .hero.cyan.darken-3.overflow-hidden
+        canvas#canvas
+        h1.bold Celebrate digital
+
+block custom-scripts
+    script(src='./assets/js/hexes-iii.js')

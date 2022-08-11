@@ -1,0 +1,17 @@
+extends _base.pug
+
+block vars
+    - colorScheme = 'pink lighten-2'
+    - logoType = 'image'
+    - cases = 'white-bgs'
+
+block title
+    title Nås
+
+block hero
+    .hero.pink.darken-4.overflow-hidden
+        canvas#canvas
+        h1.bold All the way, any way
+
+block custom-scripts
+    script(src='./assets/js/hexes-ii.js')

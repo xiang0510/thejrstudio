@@ -1,0 +1,84 @@
+doctype html
+html(lang='en')
+
+    include layout/_head.pug
+
+    block vars
+        - var bodyClass = '' // empty or dark
+        - var logoType = '' // text or image
+
+    body(class=bodyClass)
+        #loading-overlay.loading-overlay
+
+        // Pace loader
+        .pace#pace
+            .pace-activity
+
+        // Navigation
+        include layout/_nav.pug
+
+        // Main content
+        main#main.main
+            block hero
+
+            section.section.scrollspy
+                .container
+                    .row
+                        .col.s12.l6
+                            h2 About us
+                            h3 Get to know us better
+                        .col.s12.l6
+                            p.flow-text
+                                | We are a modern full-service design studio that creates gorgeous and functional state of the art digital solutions.
+                                | Everyday we exist to create challenging and engaging visual concepts.
+
+            section.section.scrollspy#cases
+                .container
+                    .row
+                        .col.s12.l6
+                            h2 Selected cases
+                            h3 The latest and the greatest
+
+                if cases === 'white-bgs'
+                    include components/_cases-2.pug
+                else if cases === 'alt'
+                    include components/_cases-3.pug
+                else
+                    include components/_cases.pug
+
+            section.services-section.section.scrollspy#services
+                include components/_service-icons.pug
+
+            section.section.scrollspy#stories
+                include components/_stories.pug
+
+            section.section.scrollspy#contact(class=colorScheme)
+                .container
+                    .row.center
+                        .col.s12
+                            h2.white-text Message us
+                    form#mail-form(action='mailer/mailer.php', novalidate, autocomplete='off')
+                        .row
+                            .col.s12.l6
+                                .input-field
+                                    input#name(type='text', name='name')
+                                    label(for='name') Name
+                            .col.s12.l6
+                                .input-field
+                                    input#email(type='email', name='email')
+                                    label(for='email') Email
+                        .row
+                            .col.s12
+                                .input-field
+                                    textarea#message.materialize-textarea(name='message')
+                                    label(for='message') Message
+                        .row
+                            .col.s12.center
+                                button#send-message.btn.btn-large.btn-flat.waves-effect.waves-dark.white-text(type='submit') Send
+
+        // Footer
+        include layout/_footer.pug
+
+        include layout/_scripts.pug
+
+        block custom-scripts

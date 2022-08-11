@@ -1,0 +1,55 @@
+doctype html
+html(lang='en')
+
+    include layout/_head.pug
+
+    block vars
+        - var bodyClass = 'choose-demo' // empty or dark
+
+    body(class=bodyClass)
+        .row
+            .col.s12.center
+                img.logo(src='./assets/images/nas-logo-black.png', alt='Nas logo')
+        .row
+            .col.s12.l4
+                a(href='index-hex-1.html')
+                    img.responsive-img(src='./assets/images/nas-screens/hex-1.png', alt='Nas demo screen')
+
+            .col.s12.l4
+                a(href='index-hex-2.html')
+                    img.responsive-img(src='./assets/images/nas-screens/hex-2.png', alt='Nas demo screen')
+
+            .col.s12.l4
+                a(href='index-hex-3.html')
+                    img.responsive-img(src='./assets/images/nas-screens/hex-3.png', alt='Nas demo screen')
+
+            .col.s12.l4
+                a(href='index-tri-1.html')
+                    img.responsive-img(src='./assets/images/nas-screens/tri-1.png', alt='Nas demo screen')
+
+            .col.s12.l4
+                a(href='index-tri-2.html')
+                    img.responsive-img(src='./assets/images/nas-screens/tri-2.png', alt='Nas demo screen')
+
+            .col.s12.l4
+                a(href='index-tri-3.html')
+                    img.responsive-img(src='./assets/images/nas-screens/tri-3.png', alt='Nas demo screen')
+
+            .col.s12.l4
+                a(href='index-slider.html')
+                    img.responsive-img(src='./assets/images/nas-screens/slider.png', alt='Nas demo screen')
+
+            .col.s12.l4
+                a(href='index-video-bg.html')
+                    img.responsive-img(src='./assets/images/nas-screens/video.png', alt='Nas demo screen')
+
+        .row
+            .col.s12.buy-now.center.grey.lighten-4.flow-text
+                a.underline(href='?ref=pimmey') Purchase now
+
+        footer
+            .container
+                .row
+                    .col.s12.grey-text.text-lighten-1.center
+                        | &copy;&nbsp;
+                        a.underline.grey-text(href='http://themeforest.net/user/pimmey?ref=pimmey') pimmey

@@ -1,0 +1,14 @@
+.navbar-fixed.zero-height
+    nav
+        .nav-wrapper
+            .row
+                .col.s12.l6
+                    if logoType === 'image'
+                        .brand-logo
+                            img.white-logo(src='./assets/images/nas-logo-white.png')
+                            img.black-logo(src='./assets/images/nas-logo-black.png')
+                    else
+                        .brand-logo Nås
+                .col.s12.l6
+                    ul.hide-on-med-and-down.table-of-contents
+                        include ../components/_nav-items.pug

@@ -1,0 +1,21 @@
+.container
+    .row.center
+        .col.s12
+            h2 Latest stories
+            h3 Get to know us better
+
+            ul.posts
+                li: a.modal-trigger(href='#pink-sunglasses', data-slug='pink-sunglasses') Pink sunglasses
+                li: a.modal-trigger(href='#table-design', data-slug='table-design') Table design
+                li: a.modal-trigger(href='#no-men-no-cry', data-slug='no-men-no-cry') No men no cry
+                li: a.modal-trigger(href='#pink-sunglasses', data-slug='delicious-lollipop') Delicious lollipop
+                li: a.modal-trigger(href='#table-design', data-slug='milky-lady') Milky lady
+
+.posts-covers
+    .pink-sunglasses(style='background-image: url(./assets/images/lady/lady-pink-sunglasses.jpg)')
+    .table-design.bg-position-top(style='background-image: url(./assets/images/lady/lady-on-table.jpg)')
+    .no-men-no-cry(style='background-image: url(./assets/images/lady/lady-crying-portrait.jpg)')
+    .delicious-lollipop(style='background-image: url(./assets/images/lady/lady-lolly-3.jpg)')
+    .milky-lady(style='background-image: url(./assets/images/lady/lady-milk.jpg)')
+
+include _modals-stories.pug

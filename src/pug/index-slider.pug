@@ -1,0 +1,24 @@
+extends _base.pug
+
+block vars
+    - colorScheme = 'blue'
+
+block title
+    title Nås
+
+block hero
+    .slider
+        ul.slides
+            li
+                img(src='./assets/images/work/blue-radio-blue-bg.png')
+                a.explore-case.btn.btn-large.btn-flat.waves-effect.waves-dark.white-text(type='submit') Explore case study
+            li
+                img(src='./assets/images/work/clock-green-bg.png')
+                a.explore-case.btn.btn-large.btn-flat.waves-effect.waves-dark.white-text(type='submit') Explore case study
+            li
+                img(src='./assets/images/work/teapot-bluegrey-bg.png')
+                a.explore-case.btn.btn-large.btn-flat.waves-effect.waves-dark.white-text(type='submit') Explore case study
+
+block custom-scripts
+    script(src='./libs/flat-surface-shader/deploy/fss.js')
+    script(src='./assets/js/triangles-iii.js')

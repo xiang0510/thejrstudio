@@ -1,0 +1,17 @@
+extends _base.pug
+
+block vars
+    - colorScheme = 'red-purple-gradient'
+    - cases = 'alt'
+
+block title
+    title Nås
+
+block hero
+    #triangles.triangles.hero
+        #output
+        h1 Help has arrived
+
+block custom-scripts
+    script(src='./libs/flat-surface-shader/deploy/fss.js')
+    script(src='./assets/js/triangles-iii.js')
